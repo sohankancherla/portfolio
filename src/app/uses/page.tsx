@@ -2,6 +2,136 @@ import { Card } from '@/components/Card'
 import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
+import { SiHtml5 } from 'react-icons/si'
+import { SiCss3 } from 'react-icons/si'
+import { SiJavascript } from 'react-icons/si'
+import { SiTypescript } from 'react-icons/si'
+import { SiReact } from 'react-icons/si'
+import { SiTailwindcss } from 'react-icons/si'
+import { SiNextdotjs } from 'react-icons/si'
+import { MdLockPerson } from 'react-icons/md'
+import { BsStripe } from 'react-icons/bs'
+import { SiPython } from 'react-icons/si'
+import { SiFlask } from 'react-icons/si'
+import { SiNodedotjs } from 'react-icons/si'
+import { SiExpress } from 'react-icons/si'
+import { SiMongodb } from 'react-icons/si'
+import { BiLogoPostgresql } from 'react-icons/bi'
+import { SiSupabase } from 'react-icons/si'
+import { SiPrisma } from 'react-icons/si'
+import { SiGit } from 'react-icons/si'
+import { SiGithub } from 'react-icons/si'
+import { SiVercel } from 'react-icons/si'
+import { FaAws } from 'react-icons/fa6'
+import { SiDocker } from 'react-icons/si'
+import { SiKubernetes } from 'react-icons/si'
+import { SiCloudflare } from 'react-icons/si'
+
+const frontend = [
+  {
+    name: 'HTML',
+    logo: SiHtml5,
+  },
+  {
+    name: 'CSS',
+    logo: SiCss3,
+  },
+  {
+    name: 'JavaScript',
+    logo: SiJavascript,
+  },
+  {
+    name: 'TypeScript',
+    logo: SiTypescript,
+  },
+  {
+    name: 'React',
+    logo: SiReact,
+  },
+  {
+    name: 'Tailwind CSS',
+    logo: SiTailwindcss,
+  },
+  {
+    name: 'Next.js',
+    logo: SiNextdotjs,
+  },
+  {
+    name: 'NextAuth.js',
+    logo: MdLockPerson,
+  },
+  {
+    name: 'Stripe',
+    logo: BsStripe,
+  },
+]
+
+const backend = [
+  {
+    name: 'Python',
+    logo: SiPython,
+  },
+  {
+    name: 'Flask',
+    logo: SiFlask,
+  },
+  {
+    name: 'Node.js',
+    logo: SiNodedotjs,
+  },
+  {
+    name: 'Express',
+    logo: SiExpress,
+  },
+  {
+    name: 'MongoDB',
+    logo: SiMongodb,
+  },
+  {
+    name: 'PostgreSQL',
+    logo: BiLogoPostgresql,
+  },
+  {
+    name: 'Supabase',
+    logo: SiSupabase,
+  },
+  {
+    name: 'Prisma ORM',
+    logo: SiPrisma,
+  },
+]
+
+const deployment = [
+  {
+    name: 'Git',
+    logo: SiGit,
+  },
+  {
+    name: 'GitHub',
+    logo: SiGithub,
+  },
+  {
+    name: 'Vercel',
+    logo: SiVercel,
+  },
+  {
+    name: 'AWS',
+    logo: FaAws,
+  },
+  {
+    name: 'Docker',
+    logo: SiDocker,
+  },
+  {
+    name: 'Kubernetes',
+    logo: SiKubernetes,
+  },
+  {
+    name: 'Cloudflare',
+    logo: SiCloudflare,
+  },
+]
+
 function ToolsSection({
   children,
   ...props
@@ -42,80 +172,48 @@ export const metadata = {
 export default function Uses() {
   return (
     <SimpleLayout
-      title="What I've learned over the years."
-      intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
+      title="The things I am proficient in."
+      intro="I've spent a lot of time over the years honing my skills and finding the best tools for the job. Here are the things I use on a daily basis to get my work done."
     >
       <div className="space-y-20">
-        <ToolsSection title="Workstation">
-          <Tool title="16” MacBook Pro, M1 Max, 64GB RAM (2021)">
-            I was using an Intel-based 16” MacBook Pro prior to this and the
-            difference is night and day. I’ve never heard the fans turn on a
-            single time, even under the incredibly heavy loads I put it through
-            with our various launch simulations.
-          </Tool>
-          <Tool title="Apple Pro Display XDR (Standard Glass)">
-            The only display on the market if you want something HiDPI and
-            bigger than 27”. When you’re working at planetary scale, every pixel
-            you can get counts.
-          </Tool>
-          <Tool title="IBM Model M SSK Industrial Keyboard">
-            They don’t make keyboards the way they used to. I buy these any time
-            I see them go up for sale and keep them in storage in case I need
-            parts or need to retire my main.
-          </Tool>
-          <Tool title="Apple Magic Trackpad">
-            Something about all the gestures makes me feel like a wizard with
-            special powers. I really like feeling like a wizard with special
-            powers.
-          </Tool>
-          <Tool title="Herman Miller Aeron Chair">
-            If I’m going to slouch in the worst ergonomic position imaginable
-            all day, I might as well do it in an expensive chair.
-          </Tool>
+        <ToolsSection title="Frontend">
+          <div className="grid grid-cols-4 gap-8 text-zinc-600 dark:text-zinc-400">
+            {frontend.map((skill) => (
+              <div
+                key={skill.name}
+                className="flex flex-col items-center justify-center gap-2"
+              >
+                <skill.logo className="h-8 w-8" />
+                <span className="text-xs font-medium">{skill.name}</span>
+              </div>
+            ))}
+          </div>
         </ToolsSection>
-        <ToolsSection title="Development tools">
-          <Tool title="Sublime Text 4">
-            I don’t care if it’s missing all of the fancy IDE features everyone
-            else relies on, Sublime Text is still the best text editor ever
-            made.
-          </Tool>
-          <Tool title="iTerm2">
-            I’m honestly not even sure what features I get with this that aren’t
-            just part of the macOS Terminal but it’s what I use.
-          </Tool>
-          <Tool title="TablePlus">
-            Great software for working with databases. Has saved me from
-            building about a thousand admin interfaces for my various projects
-            over the years.
-          </Tool>
+        <ToolsSection title="Backend">
+          <div className="grid grid-cols-4 gap-8 text-zinc-600 dark:text-zinc-400">
+            {backend.map((skill) => (
+              <div
+                key={skill.name}
+                className="flex flex-col items-center justify-center gap-2"
+              >
+                <skill.logo className="h-8 w-8" />
+                <span className="text-xs font-medium">{skill.name}</span>
+              </div>
+            ))}
+          </div>
         </ToolsSection>
-        <ToolsSection title="Design">
-          <Tool title="Figma">
-            We started using Figma as just a design tool but now it’s become our
-            virtual whiteboard for the entire company. Never would have expected
-            the collaboration features to be the real hook.
-          </Tool>
-        </ToolsSection>
-        <ToolsSection title="Productivity">
-          <Tool title="Alfred">
-            It’s not the newest kid on the block but it’s still the fastest. The
-            Sublime Text of the application launcher world.
-          </Tool>
-          <Tool title="Reflect">
-            Using a daily notes system instead of trying to keep things
-            organized by topics has been super powerful for me. And with
-            Reflect, it’s still easy for me to keep all of that stuff
-            discoverable by topic even though all of my writing happens in the
-            daily note.
-          </Tool>
-          <Tool title="SavvyCal">
-            Great tool for scheduling meetings while protecting my calendar and
-            making sure I still have lots of time for deep work during the week.
-          </Tool>
-          <Tool title="Focus">
-            Simple tool for blocking distracting websites when I need to just do
-            the work and get some momentum going.
-          </Tool>
+        <ToolsSection title="Deployment">
+          <div className="grid grid-cols-4 gap-8 text-zinc-600 dark:text-zinc-400">
+            {deployment.map((skill) => (
+              <div
+                key={skill.name}
+                className="flex flex-col items-center justify-center gap-2"
+              >
+                <skill.logo className="h-8 w-8" />
+                <span className="text-xs font-medium">{skill.name}</span>
+              </div>
+            ))}
+          </div>
         </ToolsSection>
       </div>
     </SimpleLayout>
