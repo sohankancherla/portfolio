@@ -1,4 +1,3 @@
-import { Card } from '@/components/Card'
 import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
@@ -145,25 +144,6 @@ function ToolsSection({
   )
 }
 
-function Tool({
-  title,
-  href,
-  children,
-}: {
-  title: string
-  href?: string
-  children: React.ReactNode
-}) {
-  return (
-    <Card as="li">
-      <Card.Title as="h3" href={href}>
-        {title}
-      </Card.Title>
-      <Card.Description>{children}</Card.Description>
-    </Card>
-  )
-}
-
 export const metadata = {
   title: 'Skills',
   description: "What I've learned over the years.",
@@ -181,7 +161,7 @@ export default function Uses() {
             {frontend.map((skill) => (
               <div
                 key={skill.name}
-                className="flex flex-col items-center justify-center gap-2"
+                className="flex flex-col items-center justify-center gap-1"
               >
                 <skill.logo className="h-8 w-8" />
                 <span className="text-xs font-medium">{skill.name}</span>
@@ -194,7 +174,7 @@ export default function Uses() {
             {backend.map((skill) => (
               <div
                 key={skill.name}
-                className="flex flex-col items-center justify-center gap-2"
+                className="flex flex-col items-center justify-center gap-1"
               >
                 <skill.logo className="h-8 w-8" />
                 <span className="text-xs font-medium">{skill.name}</span>
@@ -207,7 +187,7 @@ export default function Uses() {
             {deployment.map((skill) => (
               <div
                 key={skill.name}
-                className="flex flex-col items-center justify-center gap-2"
+                className="flex flex-col items-center justify-center gap-1"
               >
                 <skill.logo className="h-8 w-8" />
                 <span className="text-xs font-medium">{skill.name}</span>
