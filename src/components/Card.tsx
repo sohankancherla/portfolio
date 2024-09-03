@@ -1,18 +1,6 @@
-import Link from 'next/link'
+import Image from 'next/image'
 import clsx from 'clsx'
-
-function ChevronRightIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M6.75 5.75 9.25 8l-2.5 2.25"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
+import logoAirbnb from '@/images/logos/airbnb.svg'
 
 export function Card<T extends React.ElementType = 'div'>({
   as,
@@ -26,31 +14,18 @@ export function Card<T extends React.ElementType = 'div'>({
 
   return (
     <Component
-      className={clsx(className, 'group relative flex flex-col items-start')}
+      className={clsx(className, 'group relative flex items-center gap-4')}
     >
-      {children}
+      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+        <Image src={logoAirbnb} alt="" className="h-7 w-7" unoptimized />
+      </div>
+      <div className="relative flex flex-col items-start">{children}</div>
     </Component>
-  )
-}
-
-Card.Link = function CardLink({
-  children,
-  ...props
-}: React.ComponentPropsWithoutRef<typeof Link>) {
-  return (
-    <>
-      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50" />
-      <Link {...props}>
-        <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
-        <span className="relative z-10">{children}</span>
-      </Link>
-    </>
   )
 }
 
 Card.Title = function CardTitle<T extends React.ElementType = 'h2'>({
   as,
-  href,
   children,
 }: Omit<React.ComponentPropsWithoutRef<T>, 'as' | 'href'> & {
   as?: T
@@ -60,7 +35,7 @@ Card.Title = function CardTitle<T extends React.ElementType = 'h2'>({
 
   return (
     <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-      {href ? <Card.Link href={href}>{children}</Card.Link> : children}
+      {children}
     </Component>
   )
 }
@@ -71,21 +46,9 @@ Card.Description = function CardDescription({
   children: React.ReactNode
 }) {
   return (
-    <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+    <p className="relative z-10 mt-1 text-sm text-zinc-600 dark:text-zinc-400">
       {children}
     </p>
-  )
-}
-
-Card.Cta = function CardCta({ children }: { children: React.ReactNode }) {
-  return (
-    <div
-      aria-hidden="true"
-      className="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500"
-    >
-      {children}
-      <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
-    </div>
   )
 }
 
