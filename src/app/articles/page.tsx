@@ -129,7 +129,7 @@ export default function Timeline() {
   return (
     <SimpleLayout
       title="My journey through software."
-      intro="I'm currently seeking a new role in Frontend Development where I can collaborate with a mentor to learn and grow in the field."
+      intro="I'm currently seeking a new role in Frontend Development where I can collaborate with the best developers in the industry to learn and grow in the field."
     >
       <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
         <h2 className="text-xl font-semibold">Work Experience</h2>

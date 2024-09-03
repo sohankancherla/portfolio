@@ -83,7 +83,7 @@ export default function About() {
               taught me the fundamentals of computer science and how to think
               like a programmer. This is where I discoverd HTML, CSS, and
               JavaScript. Eager to learn more, I transitioned to The Odin
-              Project, where I practice Full Stack Development.
+              Project, where I practiced Full Stack Development.
             </p>
             <p>
               I&apos;m still at Intel, applying everything I&apos;ve learned. My
