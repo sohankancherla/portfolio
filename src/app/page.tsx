@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
+import { Button } from '@/components/Button'
 
 function SocialLink({
   className,
@@ -38,6 +39,19 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
       <path
         fillRule="evenodd"
         d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
+      />
+    </svg>
+  )
+}
+
+function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
+      <path
+        d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   )
@@ -118,6 +132,15 @@ export default function About() {
               sohank@gmail.com
             </SocialLink>
           </ul>
+          <Button
+            href="/Sohan_Resume.pdf"
+            target="_blank"
+            variant="secondary"
+            className="group mt-6 w-full"
+          >
+            Download CV
+            <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+          </Button>
         </div>
       </div>
     </Container>
