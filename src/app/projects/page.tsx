@@ -10,7 +10,10 @@ const projects = [
     name: 'Pixolve',
     description:
       'AI image solutions to help you clean and organize your photo library.',
-    link: { href: 'http://pixolve.app', label: 'pixolve.app' },
+    link: {
+      href: 'https://github.com/sohankancherla/pixolve-web',
+      label: 'github.com',
+    },
     logo: logoPixolve,
   },
 ]
