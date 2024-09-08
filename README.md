@@ -1,42 +1,33 @@
-# Spotlight
+<br/>
+<p align="center">
+  <h3 align="center">Portfolio</h3>
 
-Spotlight is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+  <p align="center">
+    My Portfolio Website Built in Next.js
+    <br/>
+    <br/>
+  </p>
+</p>
 
-## Getting started
+## Table Of Contents
 
-To get started with this template, first install the npm dependencies:
+- [Built With](#built-with)
+- [Visit](#visit)
+- [Authors](#authors)
 
-```bash
-npm install
-```
+## Built With
 
-Next, create a `.env.local` file in the root of your project and set the `NEXT_PUBLIC_SITE_URL` variable to your site's public URL:
+Below is a list of the major tools and languages utilized:
 
-```
-NEXT_PUBLIC_SITE_URL=https://example.com
-```
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 
-Next, run the development server:
+## Visit
 
-```bash
-npm run dev
-```
+[Visit Portfolio](https://sohankancherla.vercel.app)
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+## Authors
 
-## Customizing
-
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
-
-## License
-
-This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
-
-## Learn more
-
-To learn more about the technologies used in this site template, see the following resources:
-
-- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
-- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
-- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
-- [MDX](https://mdxjs.com) - the MDX documentation
+- **Sohan Kancherla** - _Comp Sci Student_ - [Github](https://github.com/sohankancherla) - _Developer_
