@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Home() {
 	return (
 		<>
-			<main className="p-8 w-3xl mx-auto space-y-16">
+			<main className="p-6 sm:p-8 sm:w-3xl mx-auto space-y-16">
 				<section className="mt-10">
 					<Image
 						src="/profile.jpg"
@@ -45,7 +45,8 @@ export default function Home() {
 					<p className="text-base text-muted-foreground">Coming soon.</p>
 				</section>
 			</main>
-			<footer className="max-w-3xl mx-auto mt-auto flex p-8 justify-between items-center w-full">
+
+			<footer className="max-w-3xl mx-auto mt-auto flex flex-col sm:flex-row p-6 sm:p-8 justify-between sm:items-center w-full gap-4">
 				<div className="flex gap-4">
 					<Link
 						href="https://github.com/sohankancherla"
