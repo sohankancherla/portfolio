@@ -26,9 +26,17 @@ export default function Home() {
 				<section>
 					<h2 className="header-2 mb-1">About</h2>
 					<p className="text-base text-muted-foreground leading-relaxed">
-						I'm a Founding Software Engineer at Penciled (YC W24). I build
-						applications that prioritize user experience, performance, and
-						thoughtful design.
+						I'm a Founding Software Engineer at{" "}
+						<Link
+							href="https://penciled.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-primary hover:underline font-medium"
+						>
+							Penciled (YC W24)
+						</Link>
+						. I build applications that prioritize user experience, performance,
+						and thoughtful design.
 					</p>
 				</section>
 
@@ -55,7 +63,7 @@ export default function Home() {
 					</Link>
 				</div>
 				<p className="text-sm text-muted-foreground/60">
-					© 2026 Sohan Kancherla. All rights reserved.
+					&copy; 2026 Sohan Kancherla. All rights reserved.
 				</p>
 			</footer>
 		</>
