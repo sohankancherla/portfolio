@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
 	return (
-		<main className="p-8 w-2xl mx-auto space-y-16">
+		<main className="p-8 w-3xl mx-auto space-y-16">
 			<section className="mt-10">
 				<Image
 					src="/profile.jpg"
@@ -20,14 +20,16 @@ export default function Home() {
 			</section>
 
 			<section>
-				<h2 className="header-2">About</h2>
-				<p className="text-base text-muted-foreground">
-					I am a Founding Software Engineer at Penciled (YC W24).
+				<h2 className="header-2 mb-1">About</h2>
+				<p className="text-base text-muted-foreground leading-relaxed">
+					I'm a Founding Software Engineer at Penciled (YC W24). I build
+					applications that prioritize user experience, performance, and
+					thoughtful design.
 				</p>
 			</section>
 
 			<section>
-				<h2 className="header-2">Projects</h2>
+				<h2 className="header-2 mb-1">Projects</h2>
 				<p className="text-base text-muted-foreground">Coming soon.</p>
 			</section>
 		</main>
