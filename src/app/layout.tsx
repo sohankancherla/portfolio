@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://sohankancherla.com"),
@@ -17,8 +18,21 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className="h-full antialiased font-sans">
-			<body className="min-h-full flex flex-col">{children}</body>
+		<html
+			lang="en"
+			suppressHydrationWarning
+			className="h-full antialiased font-sans"
+		>
+			<body className="min-h-full flex flex-col">
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					{children}
+				</ThemeProvider>
+			</body>
 		</html>
 	);
 }
