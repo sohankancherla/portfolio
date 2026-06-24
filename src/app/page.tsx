@@ -17,7 +17,7 @@ export default function Home() {
 					/>
 					<div>
 						<h1 className="header-1 mt-4">Sohan Kancherla</h1>
-						<p className="text-base text-muted-foreground font-medium">
+						<p className="text-base text-accent-foreground font-medium">
 							Software Engineer
 						</p>
 					</div>
@@ -25,7 +25,7 @@ export default function Home() {
 
 				<section>
 					<h2 className="header-2 mb-1">About</h2>
-					<p className="text-base text-muted-foreground leading-relaxed">
+					<p className="text-base text-accent-foreground leading-relaxed">
 						I'm a Founding Software Engineer at{" "}
 						<Link
 							href="https://penciled.com"
@@ -42,7 +42,7 @@ export default function Home() {
 
 				<section>
 					<h2 className="header-2 mb-1">Projects</h2>
-					<p className="text-base text-muted-foreground">Coming soon.</p>
+					<p className="text-base text-accent-foreground">Coming soon.</p>
 				</section>
 			</main>
 
@@ -53,17 +53,17 @@ export default function Home() {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<Github className="size-4.5 text-muted-foreground/80 hover:text-primary [&_path]:fill-current" />
+						<Github className="size-4.5 text-muted-foreground hover:text-primary [&_path]:fill-current" />
 					</Link>
 					<Link
 						href="https://www.linkedin.com/in/sohan-kancherla/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<Linkedin className="size-4.5 text-muted-foreground/80 hover:text-primary [&_path]:fill-current" />
+						<Linkedin className="size-4.5 text-muted-foreground hover:text-primary [&_path]:fill-current" />
 					</Link>
 				</div>
-				<p className="text-sm text-muted-foreground/60">
+				<p className="text-sm text-muted-foreground/80">
 					&copy; 2026 Sohan Kancherla. All rights reserved.
 				</p>
 			</footer>
