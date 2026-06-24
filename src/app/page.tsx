@@ -35,8 +35,8 @@ export default function Home() {
 						>
 							Penciled (YC W24)
 						</Link>
-						. I build applications that prioritize user experience, performance,
-						and thoughtful design.
+						. I love building apps and think deeply about performance, user
+						experience, and thoughtful design.
 					</p>
 				</section>
 
